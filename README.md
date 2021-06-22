@@ -1,2 +1,2 @@
-Student_Result_System
+Student_Result_Recording_System
 
