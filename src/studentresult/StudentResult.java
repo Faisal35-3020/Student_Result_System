@@ -5,6 +5,12 @@
  */
 package studentresult;
 
+import java.awt.Component;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Faisal
@@ -60,6 +66,11 @@ public class StudentResult extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jbtnExit = new javax.swing.JButton();
+        jbtnRanking = new javax.swing.JButton();
+        jbtnTranscript = new javax.swing.JButton();
+        jbtnDelete = new javax.swing.JButton();
+        jbtnReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Student_Result_System");
@@ -264,13 +275,13 @@ public class StudentResult extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -313,8 +324,80 @@ public class StudentResult extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 440, 1030, 110));
 
+        jbtnExit.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jbtnExit.setText("Exit");
+        jbtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnExitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 570, -1, -1));
+
+        jbtnRanking.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jbtnRanking.setText("Ranking");
+        getContentPane().add(jbtnRanking, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, -1, -1));
+
+        jbtnTranscript.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jbtnTranscript.setText("Transcript");
+        getContentPane().add(jbtnTranscript, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, -1, -1));
+
+        jbtnDelete.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jbtnDelete.setText("Delete");
+        jbtnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnDeleteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 570, -1, -1));
+
+        jbtnReset.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jbtnReset.setText("Reset");
+        jbtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnResetActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnResetActionPerformed
+        // TODO add your handling code here:
+        JTextField temp=null;
+    for(Component c:jPanel1.getComponents()){
+     if(c.getClass().toString().contains("javax.swing.JTextField")){
+        temp=(JTextField)c;
+        temp.setText(null);
+    }
+}
+    }//GEN-LAST:event_jbtnResetActionPerformed
+private JFrame frame; 
+    private void jbtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExitActionPerformed
+        frame = new JFrame("Exit");
+        if (JOptionPane.showConfirmDialog(frame, "Confirm if you want to exit", "Student Result System",
+                JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jbtnExitActionPerformed
+
+    private void jbtnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDeleteActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        if(jTable1.getSelectedRow()==-1){
+            if(jTable1.getRowCount()==0){
+
+                JOptionPane.showMessageDialog(null, "No data to delete ", 
+                        "Student Result System",JOptionPane.OK_OPTION);
+            }else{
+
+                JOptionPane.showMessageDialog(null, "Select a row to delete ", 
+                        "Student Result System",JOptionPane.OK_OPTION);
+            }
+        }else{
+            model.removeRow(jTable1.getSelectedRow());
+        } 
+    }//GEN-LAST:event_jbtnDeleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -366,16 +449,8 @@ public class StudentResult extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
@@ -393,5 +468,10 @@ public class StudentResult extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton jbtnDelete;
+    private javax.swing.JButton jbtnExit;
+    private javax.swing.JButton jbtnRanking;
+    private javax.swing.JButton jbtnReset;
+    private javax.swing.JButton jbtnTranscript;
     // End of variables declaration//GEN-END:variables
 }
