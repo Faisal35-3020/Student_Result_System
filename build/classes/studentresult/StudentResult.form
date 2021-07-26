@@ -327,6 +327,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtBanglaKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
@@ -342,6 +345,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtEnglishKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
@@ -357,6 +363,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtMathKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
@@ -372,6 +381,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtPhysicsKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
@@ -387,6 +399,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtChemistryKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
@@ -402,6 +417,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtBiologyKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
@@ -417,6 +435,9 @@
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtxtICTKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
@@ -517,7 +538,7 @@
                 <Column editable="true" title="ICT" type="java.lang.Object"/>
                 <Column editable="true" title="Total" type="java.lang.Object"/>
                 <Column editable="true" title="Average" type="java.lang.Object"/>
-                <Column editable="true" title="Title 13" type="java.lang.Object"/>
+                <Column editable="true" title="Class" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>
@@ -536,7 +557,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="960" y="570" width="-1" height="-1"/>
+          <AbsoluteConstraints x="960" y="570" width="110" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -600,7 +621,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="770" y="570" width="150" height="50"/>
+          <AbsoluteConstraints x="770" y="570" width="150" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
