@@ -6,6 +6,7 @@
 package studentresult;
 
 import java.awt.Component;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -110,36 +111,71 @@ public class StudentResult extends javax.swing.JFrame {
         jLabel6.setText("Division:");
 
         jtxtBangla.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtBangla.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtBanglaKeyTyped(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setText("Bangla");
 
         jtxtEnglish.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtEnglish.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtEnglishKeyTyped(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel8.setText("English");
 
         jtxtMath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtMath.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtMathKeyTyped(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel9.setText("Math");
 
         jtxtPhysics.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtPhysics.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtPhysicsKeyTyped(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel10.setText("Physics");
 
         jtxtChemistry.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtChemistry.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtChemistryKeyTyped(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel11.setText("Chemistry");
 
         jtxtBiology.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtBiology.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtBiologyKeyTyped(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel12.setText("Biology");
 
         jtxtICT.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jtxtICT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtICTKeyTyped(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel13.setText("ICT");
@@ -275,13 +311,13 @@ public class StudentResult extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -317,7 +353,7 @@ public class StudentResult extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Student_ID", "Name", "Section", "Bangla", "English", "Math", "Physics", "Chemistry", "Biology", "ICT", "Total", "Average", "Title 13"
+                "Student_ID", "Name", "Section", "Bangla", "English", "Math", "Physics", "Chemistry", "Biology", "ICT", "Total", "Average", "Class"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
@@ -331,7 +367,7 @@ public class StudentResult extends javax.swing.JFrame {
                 jbtnExitActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 570, -1, -1));
+        getContentPane().add(jbtnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 570, 110, -1));
 
         jbtnRanking.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jbtnRanking.setText("Ranking");
@@ -367,7 +403,7 @@ public class StudentResult extends javax.swing.JFrame {
                 jbtnResetActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, 150, 50));
+        getContentPane().add(jbtnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, 150, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -489,6 +525,76 @@ private JFrame frame;
        jtxtAverage.setText("");
        jtxtRanking.setText("");
     }//GEN-LAST:event_jbtnResetActionPerformed
+
+    private void jtxtBanglaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtBanglaKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtBanglaKeyTyped
+
+    private void jtxtEnglishKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtEnglishKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtEnglishKeyTyped
+
+    private void jtxtMathKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtMathKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtMathKeyTyped
+
+    private void jtxtPhysicsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtPhysicsKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtPhysicsKeyTyped
+
+    private void jtxtChemistryKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtChemistryKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtChemistryKeyTyped
+
+    private void jtxtBiologyKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtBiologyKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtBiologyKeyTyped
+
+    private void jtxtICTKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtICTKeyTyped
+        // TODO add your handling code here:
+        char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+        ||(iNumber == KeyEvent.VK_BACK_SPACE)
+        ||(iNumber == KeyEvent.VK_DELETE)){
+         evt.consume();
+    }
+    }//GEN-LAST:event_jtxtICTKeyTyped
 
     /**
      * @param args the command line arguments
