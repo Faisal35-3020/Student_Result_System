@@ -475,13 +475,19 @@ private JFrame frame;
 
     private void jbtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnResetActionPerformed
         // TODO add your handling code here:
-        JTextField temp=null;
-    for(Component c:jPanel1.getComponents()){
-     if(c.getClass().toString().contains("javax.swing.JTextField")){
-        temp=(JTextField)c;
-        temp.setText(null);
-    }
-}
+        jtxtStudentID.setText("");
+       jtxtName.setText("");
+       jtxtSection.setText("");
+       jtxtBangla.setText("");
+       jtxtEnglish.setText("");
+       jtxtMath.setText("");
+       jtxtPhysics.setText("");
+       jtxtChemistry.setText("");
+       jtxtBiology.setText("");
+       jtxtICT.setText("");
+       jtxtTotal.setText("");
+       jtxtAverage.setText("");
+       jtxtRanking.setText("");
     }//GEN-LAST:event_jbtnResetActionPerformed
 
     /**
